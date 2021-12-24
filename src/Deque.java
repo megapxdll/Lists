@@ -4,4 +4,5 @@ public interface Deque<E> extends Queue<E> {
 
     E removeLeft();
     E removeRight();
+
 }

@@ -20,7 +20,7 @@ public class LinkedDeque<E> extends  LinkedQueue<E> implements Deque<E> {
 
     @Override
     public E removeLeft() {
-       return data.removeFirst();
+        return data.removeFirst();
     }
 
     @Override
@@ -39,4 +39,5 @@ public class LinkedDeque<E> extends  LinkedQueue<E> implements Deque<E> {
                 "data=" + data +
                 '}';
     }
+
 }

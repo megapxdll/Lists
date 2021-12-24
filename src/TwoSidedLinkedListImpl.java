@@ -76,4 +76,5 @@ public class TwoSidedLinkedListImpl<E> extends LinkedListImpl<E> implements TwoS
     public E getLast() {
         return last.item;
     }
+
 }
