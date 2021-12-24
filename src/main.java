@@ -4,9 +4,25 @@ public class main {
 
     public static void main(String[] args) {
 
-        testLinkedQueue();
-        testLinkedListStack();
+        testLinkedDeque();
+        //testLinkedQueue();
+        //testLinkedListStack();
         testLinkedList();
+    }
+
+    private static void testLinkedDeque() {
+        LinkedDeque<Integer> deque = new LinkedDeque<>();
+
+        System.out.println("add element: " + deque.insertLeft(1));
+        System.out.println("add element: " + deque.insertRight(9));
+        System.out.println("add element: " + deque.insertLeft(2));
+        System.out.println("add element: " + deque.insertRight(8));
+        System.out.println("add element: " + deque.insertLeft(3));
+
+        deque.display();
+        System.out.println("remove: " + deque.removeLeft());
+        System.out.println("remove: " + deque.removeRight());
+
     }
 
     private static void testLinkedQueue() {
@@ -71,8 +87,12 @@ public class main {
         System.out.println("Find 1: " + linkedList.contains(1));
         System.out.println("Find 4: " + linkedList.contains(4));
         System.out.println("Find 3333: " + linkedList.contains(3333));
+        System.out.println("Last item is: " + linkedList.getLast());
         linkedList.removeFirst();
         linkedList.remove(4);
+        linkedList.removeLast();
+
+        linkedList.insertLast(13);
 
         linkedList.display();
     }
