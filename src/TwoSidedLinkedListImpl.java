@@ -25,13 +25,6 @@ public class TwoSidedLinkedListImpl<E> extends LinkedListImpl<E> implements TwoS
     }
 
     @Override
-    public E removeLast() {
-        Node<E> removedNode = last;
-        remove(last.item);
-        return removedNode.item;
-    }
-
-    @Override
     public E removeFirst() {
         E removedValue = super.removeFirst();
 
