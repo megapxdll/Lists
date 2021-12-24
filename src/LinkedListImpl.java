@@ -1,4 +1,7 @@
-public class LinkedListImpl <E> implements LinkedList<E>{
+import java.util.Iterator;
+import java.util.function.Consumer;
+
+public class LinkedListImpl <E> implements LinkedList<E>, Iterable<E> {
 
     protected int size;
     protected  Node<E> first;
@@ -96,5 +99,33 @@ public class LinkedListImpl <E> implements LinkedList<E>{
     @Override
     public E getFirst() {
         return first.item;
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return new ListIterator<>();
+    }
+
+    private class ListIterator<E> implements Iterator<E> {
+
+        @Override
+        public boolean hasNext() {
+            return false;
+        }
+
+        @Override
+        public E next() {
+            return null;
+        }
+
+        @Override
+        public void remove() {
+            Iterator.super.remove();
+        }
+
+        @Override
+        public void forEachRemaining(Consumer<? super E> action) {
+            Iterator.super.forEachRemaining(action);
+        }
     }
 }

@@ -1,15 +1,33 @@
-
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 public class main {
 
     public static void main(String[] args) {
 
+        LinkedListImpl<Integer> linkedList = new LinkedListImpl<>();
+
+        for (Integer value: linkedList) {
+            System.out.println("value" + value);
+        }
         testLinkedDeque();
         //testLinkedQueue();
         //testLinkedListStack();
         testLinkedList();
     }
 
+    private static void testIterator() {
+        List<Integer> list = new LinkedList<>();
+        Collections.addAll(list, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+        Iterator<Integer> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            Integer integer = iterator.next();
+            System.out.println(integer);
+        }
+    }
     private static void testLinkedDeque() {
         LinkedDeque<Integer> deque = new LinkedDeque<>();
 
